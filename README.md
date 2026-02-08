@@ -94,3 +94,7 @@ Recon              ICMP, ARP, TCP/UDP scans
 Logging            Syslog, Beats
 SIEM               HTTP/HTTPS (APIs)Infra NTP, DHCP
 Optional           FTP, SQL, RDP
+
+
+![Home Lab Conceptual Design](Home-Lab-Conceptual-Design/Conceptual%20Lab%20Design.png)
+
