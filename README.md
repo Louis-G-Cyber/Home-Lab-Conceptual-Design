@@ -97,4 +97,5 @@
 
 ## Conceptual Lab Diagram
 
-![Home Lab Conceptual Design](https://raw.githubusercontent.com/Louis-G-Cyber/Home-Lab-Conceptual-Design/main/Home%20Lab%20Design.png)
+![Home Lab Conceptual Design](https://raw.githubusercontent.com/Louis-G-Cyber/Home-Lab-Conceptual-Design/main/Conceptual%20Lab%20Design.png)
+
