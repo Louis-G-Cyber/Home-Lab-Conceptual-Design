@@ -1,20 +1,62 @@
 # Home-Lab-Conceptual-Design
 
 ## Objective
-- Build an isolated, multi-tier lab environment using Kali Linux, pfSense, a web-facing server (DMZ), Metasploitable, and a Windows Domain Controller
-- Simulate a realistic external attack path: web exploitation → firewall bypass via pivoting → internal compromise
-- Establish system, network, and application baselines prior to exploitation
-- Perform controlled exploitation and lateral movement using free offensive tools
-- Capture and preserve logs and artifacts before and after exploitation
-- Detect attacker activity using free defensive tooling (Sysmon, Hayabusa, RITA, pfSense logs, Wireshark)
-- Compare baseline versus post-exploitation data to identify anomalies and attacker behavior
-- Develop and document detection logic and use cases based on observed telemetry
-- Reuse the same environment for a future SIEM and detection engineering lab
-- Present the lab with clear objectives, evidence, and defensive mitigations in a GitHub portfolio
+
+- Build an isolated, multi-tier lab environment using Kali Linux, IPFire firewall, vulnerable exploitation targets, and a dedicated detection engineering network.
+  Simulate a realistic external attack path:
+- web exploitation → pivoting → internal compromise
+
+- Establish system, network, and application baselines prior to exploitation.
+  Perform controlled exploitation and lateral movement using free offensive tools.
+  Capture and preserve logs and artifacts before and after exploitation.
+
+- Detect attacker activity using free defensive tooling (Sysmon, Hayabusa, RITA, IPFire logs, Wireshark).
+  Compare baseline versus post-exploitation data to identify anomalies and attacker behavior.
+  Develop and document detection logic and use cases based on observed telemetry.
+
+- Reuse the same environment for a future SIEM and detection engineering lab.
+
+- Present the lab with clear objectives, evidence, and defensive mitigations in a GitHub portfolio.
+
+## Network Architecture 
+
+- The lab consists of three isolated virtual networks connected and segmented by an IPFire firewall.
+  Firewall platform: IPFire Project.
+
+## Network 1 — Attacker Network
+
+Purpose: Simulate external threat actors.
+
+Systems:
+- Kali Linux attacker VM
+
+## Network 2 — Exploitation / Vulnerable Network
+
+Purpose:
+- Initial compromise and pivot staging.
+
+Contains intentionally vulnerable systems:
+- OWASP Juice Shop (DMZ web server) — by OWASP
+- Mr. Robot vulnerable VM
+- Metasploitable2
+
+These systems are deliberately insecure to simulate real-world entry points.
+
+## Network 3 — Detection Engineering Practice Network
+
+Purpose: 
+- Simulate an internal enterprise environment.
+
+Systems:
+- Windows Server Domain Controller (AD)
+- WordPress Internet-facing server (DMZ) — by Automattic
+- Windows Client 1
+- Windows Client 2
 
 ## Scope
-- Lab environment is hosted entirely on VMware using isolated virtual networks
-- Systems in scope:
+Lab environment is hosted entirely on VMware using isolated virtual networks
+
+Systems in scope:
   - Kali Linux (attacker)
   - pfSense firewall
   - Web-facing Linux server (DMZ)
@@ -35,8 +77,7 @@
 - Metasploit Framework
 - Nmap
 - Burp Suite (Community)
-- Netcat
-- Chisel (pivoting / tunneling)
+- Netcat (pivoting / tunneling)
 - SSH (port forwarding)
 - Vulnerable Web Applications (DVWA, Juice Shop)
 - Metasploitable2
@@ -47,7 +88,7 @@
 - Mimikatz
 
 ### Defensive Security / Detection
-- pfSense (firewall & logging)
+- IPFIRE (firewall & logging)
 - Sysmon
 - Hayabusa
 - RITA
@@ -56,7 +97,6 @@
 - Elastic / OpenSearch (free SIEM)
 - Winlogbeat / Filebeat
 - RegShot
-- Redline
 - Volatility (memory forensics)
 - PowerShell (defensive / hunting)
 - Bash (analysis / automation)
