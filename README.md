@@ -137,5 +137,5 @@ Systems in scope:
 
 ## Conceptual Lab Diagram
 
-[View the Logical Design PDF](https://github.com/Louis-G-Cyber/Home-Lab-Conceptual-Design/main/Logical%20Diagram.pdf)
+[![View Logical Design](./diagram-preview.png)](https://github.com/Louis-G-Cyber/Home-Lab-Conceptual-Design/main/Logical%20Diagram.pdf)
 
