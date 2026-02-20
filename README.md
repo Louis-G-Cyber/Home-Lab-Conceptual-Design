@@ -58,7 +58,7 @@ Lab environment is hosted entirely on VMware using isolated virtual networks
 
 Systems in scope:
   - Kali Linux (attacker)
-  - pfSense firewall
+  - IPFire firewall
   - Web-facing Linux server (DMZ)
   - Mr. Robot vulnerable VM
   - Metasploitable (internal Linux host)
@@ -88,7 +88,7 @@ Systems in scope:
 - Mimikatz
 
 ### Defensive Security / Detection
-- IPFIRE (firewall & logging)
+- IPFire (firewall & logging)
 - Sysmon
 - Hayabusa
 - RITA
